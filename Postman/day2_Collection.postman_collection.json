@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "d967bbf1-bf4a-4a89-aeca-53f48e9f112c",
+		"name": "day2_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32156813",
+		"_collection_link": "https://crimson-spaceship-299967.postman.co/workspace/Jan2024~0869967c-c2db-4a5b-9707-a8be9d4f4083/collection/32156813-d967bbf1-bf4a-4a89-aeca-53f48e9f112c?action=share&source=collection_link&creator=32156813"
+	},
+	"item": [
+		{
+			"name": "LAB3_Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth_Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "postman",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://postman-echo.com/basic-auth",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"basic-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Env_Demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page={{page_no}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{page_no}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Env_Demo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users?page={{page_no}}",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "{{page_no}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 09 Jan 2024 06:36:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1704782174&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=RnQ7pSemCCNci0zziNbvJp3qC82%2Baa%2BEzX%2F1uhAMkWo%3D\"}]}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=https://nel.heroku.com/reports?ts=1704782174&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=RnQ7pSemCCNci0zziNbvJp3qC82%2Baa%2BEzX%2F1uhAMkWo%3D"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"c5-oXh5oNboR12MFdqhymJ/o+QadbA\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=14400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "EXPIRED"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "842aaa2bae8a57f4-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page\": 4,\n    \"per_page\": 6,\n    \"total\": 12,\n    \"total_pages\": 2,\n    \"data\": [],\n    \"support\": {\n        \"url\": \"https://reqres.in/#support-heading\",\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "list_ENVI1_request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(pm.environment.get('status'));\r",
+							"});\r",
+							"console.log(pm.response.status)\r",
+							"\r",
+							"pm.test(\"Validate the data\",function(){\r",
+							"    var jdata = JSON.parse(responseBody);\r",
+							"    pm.expect(jdata.data[0].id).to.eql(Number(pm.environment.get('id')));\r",
+							"    pm.expect(jdata.data[0].first_name).to.eql(pm.environment.get('fname'));\r",
+							"    pm.expect(jdata.data[0].last_name).to.eql(pm.environment.get('lname'));\r",
+							"    pm.expect(jdata.data[0].email).to.eql(pm.environment.get('email2'));\r",
+							"    console.log(jdata.data[0].email)\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

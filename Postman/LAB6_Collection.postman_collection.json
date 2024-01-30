@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "2f955c23-0599-48a6-b3f3-5c317aaa4e2b",
+		"name": "LAB6_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32156813",
+		"_collection_link": "https://crimson-spaceship-299967.postman.co/workspace/Jan2024~0869967c-c2db-4a5b-9707-a8be9d4f4083/collection/32156813-2f955c23-0599-48a6-b3f3-5c317aaa4e2b?action=share&source=collection_link&creator=32156813"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Post_Request_Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"job\": \"{{job}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/register",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
